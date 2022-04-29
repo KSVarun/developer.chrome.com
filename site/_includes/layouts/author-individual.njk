@@ -30,17 +30,31 @@
               {{ icon('world', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.twitter %}
+          
+          {% if paged.twitter and "https://twitter.com/" in paged.twitter %}
+            <a href="{{ paged.twitter }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Twitter">
+              {{ icon('twitter', {hidden: true}) }}
+            </a>
+          {% elif paged.twitter %}
             <a href="https://twitter.com/{{ paged.twitter }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Twitter">
               {{ icon('twitter', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.github %}
-            <a href="https://github.com/{{ paged.github }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="GitHub">
+       
+          {% if paged.github and "https://github.com/" in paged.github %}
+            <a href="{{ paged.github }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="GitHub">
+              {{ icon('github', {hidden: true}) }}
+            </a>
+          {% elif paged.github %}
+             <a href="https://github.com/{{ paged.github }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="GitHub">
               {{ icon('github', {hidden: true}) }}
             </a>
           {% endif %}
-          {% if paged.glitch  %}
+          {% if paged.glitch  and "https://glitch.com/" in paged.glitch %}
+            <a href="{{ paged.glitch }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Glitch">
+              {{ icon('glitch', {hidden: true}) }}
+            </a>
+          {% elif paged.glitch %}
             <a href="https://glitch.com/@{{ paged.glitch }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Glitch">
               {{ icon('glitch', {hidden: true}) }}
             </a>
